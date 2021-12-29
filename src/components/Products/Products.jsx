@@ -20,20 +20,19 @@ function Products() {
         , []
     );
 
-    function btnfunc() {
-        setbtn(!btn);
-    }
+    
 
 
     return (
         <div>
 
-            <h1>Products
-
+            <h1>
+                Products
             </h1>
-             <button onClick={btnfunc}>click</button>
 
-            {btnfunc? arrayof3Obj.map((item) => <Product nameofproduct = {item.name}/>) : <AddProduct/>}
+             <button onClick={()=>setbtn(!btn)}>click</button>
+
+            {btn? arrayof3Obj.map((item)=> <Product nameofproduct = {item.name}/>) : <AddProduct/>}
            
     
 
